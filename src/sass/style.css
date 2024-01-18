@@ -230,4 +230,39 @@ nav {
   width: 26px;
   height: 26px;
   margin: 0 auto;
+}
+
+.possibilities {
+  min-height: 900px;
+  padding: 48px 0 80px 0;
+  background: url("../img/bg/mobile_bg.png") center center/cover no-repeat;
+}
+.possibilities_img {
+  display: flex;
+  justify-content: center;
+  margin-top: 54px;
+}
+.possibilities_black_bg {
+  min-height: 502px;
+  background-color: black;
+}
+.possibilities_title {
+  font-weight: 700;
+  font-size: 38px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFF;
+}
+.possibilities_subtitle {
+  font-weight: 400;
+  font-size: 17px;
+  color: #FFF;
+  text-align: center;
+}
+.possibilities_descr {
+  color: #222;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
 }/*# sourceMappingURL=style.css.map */
