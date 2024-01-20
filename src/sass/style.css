@@ -40,7 +40,7 @@ nav {
   color: white;
 }
 .subtitle_blue {
-  color: #4CE2FF;
+  color: #1EACC7;
 }
 .subtitle_red {
   color: #FF5656;
@@ -53,13 +53,13 @@ nav {
   margin: 0;
   list-style: none;
 }
-.menu .menu_link {
+.menu_link {
   font-weight: 300;
   font-size: 15px;
   color: #FFFFFF;
   text-decoration: none;
 }
-.menu .menu_item {
+.menu_item {
   border-right: 2px dotted #000000;
   padding-right: 32px;
 }
@@ -72,25 +72,25 @@ nav {
   background: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
-.subheader .subheader_logo {
+.subheader_logo {
   display: block;
   max-width: 100%;
   margin-top: 16px;
 }
-.subheader .subheader_official {
+.subheader_official {
   font-weight: 400px;
   font-size: 13px;
   color: #FFFFFF;
   margin-top: 6px;
 }
-.subheader .subheader_call {
+.subheader_call {
   margin-top: 19px;
   font-weight: 300;
   font-size: 12px;
   color: #FFFFFF;
   text-align: right;
 }
-.subheader .subheader_phone {
+.subheader_phone {
   display: block;
   font-weight: 400;
   font-size: 22px;
@@ -101,10 +101,10 @@ nav {
   line-height: 12px;
   margin-top: 8px;
 }
-.subheader .subheader_button {
+.subheader_button {
   width: 172px;
   height: 46px;
-  background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+  background-image: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
   box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   font-weight: 400;
@@ -115,13 +115,17 @@ nav {
   border: none;
   margin-top: 19px;
 }
+.subheader_button:hover {
+  background-image: none;
+  background-color: #1EACC7;
+}
 
 .promo {
   min-height: 800px;
   background: url("../img/bg/header_bg.png") center center/cover no-repeat;
   padding: 155px 0 185px 0;
 }
-.promo .promo_header {
+.promo_header {
   font-weight: 900;
   font-size: 60px;
   text-transform: uppercase;
@@ -129,7 +133,7 @@ nav {
   line-height: 60px;
   text-align: center;
 }
-.promo .promo_subheader {
+.promo_subheader {
   font-weight: 900;
   font-size: 36px;
   text-transform: uppercase;
@@ -138,7 +142,7 @@ nav {
   margin-top: 22px;
   text-align: center;
 }
-.promo .promo_descr {
+.promo_descr {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -146,7 +150,7 @@ nav {
   text-align: center;
   margin-top: 28px;
 }
-.promo .promo_btn {
+.promo_btn {
   display: block;
   width: 259px;
   height: 63px;
@@ -162,11 +166,21 @@ nav {
   color: #FFFFFF;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
 }
+.promo_btn:hover {
+  background-image: none;
+  background-color: #1EACC7;
+}
 
 .advantages {
   height: 850px;
 }
-.advantages .advantages_card .advantages_logo {
+.advantages_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 27px;
+}
+.advantages_logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,20 +190,13 @@ nav {
   background: #1EACC7;
   border-radius: 100%;
 }
-
-.advantages_card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 27px;
-}
-.advantages_card .advantages_descr {
+.advantages_descr {
   font-size: 15px;
   line-height: 21px;
   color: #202020;
   width: 370px;
 }
-.advantages_card .advantages_descr span {
+.advantages_descr span {
   font-weight: 400;
   font-size: 17px;
   line-height: 21px;
@@ -242,6 +249,9 @@ nav {
   text-transform: uppercase;
 }
 .mobile_item_plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 35px;
   left: 50%;
@@ -249,6 +259,31 @@ nav {
   width: 26px;
   height: 26px;
   margin: 0 auto;
+  background-color: #000000;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.mobile_item_plus:before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #1EACC7;
+  transition: 0.3s;
+}
+.mobile_item_plus:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 14px;
+  width: 2px;
+  background-color: #1EACC7;
+  transition: 0.3s;
+}
+.mobile_item_plus:hover:before, .mobile_item_plus:hover:after {
+  background-color: #FF5656;
 }
 
 .possibilities {
@@ -278,37 +313,4 @@ nav {
   height: 499px;
   background-color: #070716;
   z-index: 1;
-}
-
-.condition {
-  min-height: 825px;
-}
-.condition_layer {
-  display: flex;
-  justify-content: start;
-}
-.condition_mark {
-  margin: 0 3px 0 13px;
-}
-.condition .subtitle_blue {
-  font-size: 22px;
-  font-weight: 400;
-  margin: 33px 0 20px 0;
-}
-.condition .subtitle_red {
-  font-size: 22px;
-  font-weight: 400;
-  margin: 61px 0 20px 0;
-}
-.condition .condition_descr {
-  color: #222;
-  font-size: 17px;
-  font-weight: 300;
-}
-.condition_text {
-  color: #1CA8C3;
-  font-size: 17px;
-  font-weight: 300;
-  margin: 25px 3px 0 3px;
-  line-height: 24px;
 }/*# sourceMappingURL=style.css.map */

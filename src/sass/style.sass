@@ -1,3 +1,11 @@
+$main-color: #1EACC7
+$second-color: #FF5656
+
+=btn_hover
+	&:hover
+		background-image: none
+		background-color: $main-color
+
 *
 	font-family: 'Roboto', sans-serif
 header
@@ -30,21 +38,21 @@ nav
 	&_white
 		color: white
 	&_blue
-		color: #4CE2FF
+		color: $main-color
 	&_red
-		color: #FF5656
+		color: $second-color
 .menu
 	display: flex
 	justify-content: space-between
 	padding: 13px 70px
 	margin: 0
 	list-style: none
-	.menu_link
+	&_link
 		font-weight: 300
 		font-size: 15px
 		color: #FFFFFF
 		text-decoration: none
-	.menu_item
+	&_item
 		border-right: 2px dotted #000000
 		padding-right: 32px
 .subheader
@@ -54,22 +62,22 @@ nav
 	height: 84px
 	background: rgba(0, 0, 0, .6)
 	z-index: 1
-	.subheader_logo
+	&_logo
 		display: block
 		max-width: 100%
 		margin-top: 16px
-	.subheader_official
+	&_official
 		font-weight: 400px
 		font-size: 13px
 		color: #FFFFFF
 		margin-top: 6px
-	.subheader_call
+	&_call
 		margin-top: 19px
 		font-weight: 300
 		font-size: 12px
 		color: #FFFFFF
 		text-align: right
-	.subheader_phone
+	&_phone
 		display: block
 		font-weight: 400
 		font-size: 22px
@@ -79,10 +87,10 @@ nav
 		color: #FFFFFF
 		line-height: 12px
 		margin-top: 8px
-	.subheader_button
+	&_button
 		width: 172px
 		height: 46px
-		background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
+		background-image: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%)
 		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12)
 		border-radius: 4px
 		font-weight: 400
@@ -92,18 +100,19 @@ nav
 		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
 		border: none
 		margin-top: 19px
+		+btn_hover
 .promo
 	min-height: 800px
 	background: url('../img/bg/header_bg.png') center center/cover no-repeat
 	padding: 155px 0 185px 0
-	.promo_header
+	&_header
 		font-weight: 900
 		font-size: 60px
 		text-transform: uppercase
 		color: #FFFFFF
 		line-height: 60px
 		text-align: center
-	.promo_subheader
+	&_subheader
 		font-weight: 900
 		font-size: 36px
 		text-transform: uppercase
@@ -111,14 +120,14 @@ nav
 		line-height: 36px
 		margin-top: 22px
 		text-align: center
-	.promo_descr
+	&_descr
 		font-weight: 400
 		font-size: 18px
 		line-height: 24px
 		color: #FFFFFF
 		text-align: center
 		margin-top: 28px
-	.promo_btn
+	&_btn
 		display: block
 		width: 259px
 		height: 63px
@@ -133,24 +142,25 @@ nav
 		text-transform: uppercase
 		color: #FFFFFF
 		text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
+		+btn_hover
+
 .advantages
 	height: 850px
-	.advantages_card
-		.advantages_logo
-			display: flex
-			justify-content: center
-			align-items: center
-			margin-right: 26px
-			width: 116px
-			height: 116px
-			background: #1EACC7
-			border-radius: 100%
-.advantages_card
-	display: flex
-	justify-content: center
-	align-items: center
-	margin-top: 27px
-	.advantages_descr
+	&_card
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 27px
+	&_logo
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 26px
+		width: 116px
+		height: 116px
+		background: #1EACC7
+		border-radius: 100%
+	&_descr
 		font-size: 15px
 		line-height: 21px
 		color: #202020
@@ -196,6 +206,9 @@ nav
 			line-height: 31px
 			text-transform: uppercase
 		&_plus
+			display: flex
+			justify-content: center
+			align-items: center
 			position: absolute
 			bottom: 35px
 			left: 50%
@@ -203,6 +216,29 @@ nav
 			width: 26px
 			height: 26px
 			margin: 0 auto
+			background-color: #000000
+			border-radius: 100%
+			cursor: pointer
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 2px
+				background-color: $main-color
+				transition: 0.3s
+			&:after
+				content: ''
+				position: absolute
+				left: 50%
+				transform: translateX(-50%)
+				display: block
+				height: 14px
+				width: 2px
+				background-color: $main-color
+				transition: 0.3s
+			&:hover
+				&:before, &:after
+					background-color: $second-color
 
 .possibilities
 	position: relative
@@ -228,30 +264,3 @@ nav
 		height: 499px
 		background-color: #070716
 		z-index: 1
-.condition
-	min-height: 825px
-	&_layer
-		display: flex
-		justify-content: start
-	&_mark
-		margin: 0 3px 0 13px
-	.subtitle
-		&_blue
-			font-size: 22px
-			font-weight: 400
-			margin: 33px 0 20px 0
-		&_red
-			font-size: 22px
-			font-weight: 400
-			margin: 61px 0 20px 0
-	.condition_descr
-		color: #222
-		font-size: 17px
-		font-weight: 300
-	&_text
-		color: #1CA8C3
-		font-size: 17px
-		font-weight: 300
-		margin: 25px 3px 0 3px
-		line-height: 24px
-		
