@@ -313,4 +313,52 @@ nav {
   height: 499px;
   background-color: #070716;
   z-index: 1;
+}
+
+.condition {
+  padding-bottom: 90px;
+  min-height: 825px;
+}
+.condition_block {
+  margin: 33px 0;
+}
+.condition_block_nmb {
+  margin-bottom: 0px;
+}
+.condition_block .subtitle {
+  color: #1CA8C3;
+  font-size: 22px;
+  font-weight: 400;
+  text-align: left;
+}
+.condition_list {
+  list-style-type: none;
+  padding-left: 50px;
+  margin-top: 22px;
+}
+.condition_list li {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
+.condition_list li:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  transform: translate(-5px, -1px);
+  width: 21px;
+  height: 20px;
+  background: url("../img/icons/condition_mark.png") center center/cover no-repeat;
+}
+.condition_text {
+  color: #1CA8C3;
+  font-size: 17px;
+  font-weight: 300;
+}
+.condition .warning .subtitle {
+  color: #FF5656;
+}
+.condition .warning .condition_list li:before {
+  background: url("../img/icons/condition_mark_red.png") center center/cover no-repeat;
 }/*# sourceMappingURL=style.css.map */

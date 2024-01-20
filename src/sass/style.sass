@@ -264,3 +264,44 @@ nav
 		height: 499px
 		background-color: #070716
 		z-index: 1
+
+.condition
+	padding-bottom: 90px
+	min-height: 825px
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0px
+		.subtitle
+			color: #1CA8C3
+			font-size: 22px
+			font-weight: 400
+			text-align: left
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 22px
+		li
+			font-size: 17px
+			font-weight: 300
+			line-height: 24px
+			margin-bottom: 10px
+			&:before
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				transform: translate(-5px, -1px)
+				width: 21px
+				height: 20px
+				background: url('../img/icons/condition_mark.png') center center/cover no-repeat
+	&_text
+		color: #1CA8C3
+		font-size: 17px
+		font-weight: 300
+	.warning
+		.subtitle
+			color: $second-color
+		.condition_list
+			li
+				&:before
+					background: url('../img/icons/condition_mark_red.png') center center/cover no-repeat
