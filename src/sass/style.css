@@ -415,4 +415,30 @@ nav {
   height: 720px;
   background-color: #070716;
   z-index: 1;
+}
+
+footer {
+  padding: 12px 22px 37px 31px;
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
+.footer_divider {
+  background-color: #1EACC7;
+  width: 301px;
+  height: 7px;
+  margin: 0 auto;
+}
+.footer_links_up {
+  color: #070716;
+  font-size: 15px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.footer_links_down {
+  color: #999;
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
