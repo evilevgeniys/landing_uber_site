@@ -512,4 +512,13 @@ footer {
   .menu_link {
     font-size: 13px;
   }
+  .promo_header {
+    font-size: 50px;
+  }
+  .advantages_card {
+    align-items: flex-start;
+  }
+  .advantages_descr {
+    width: 300px;
+  }
 }/*# sourceMappingURL=style.css.map */
