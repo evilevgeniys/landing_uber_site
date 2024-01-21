@@ -398,9 +398,9 @@ nav {
   line-height: 68px;
   text-transform: uppercase;
   z-index: 3;
-  color: #1FBAD6;
 }
 .world .container .link a {
+  color: #1FBAD6;
   text-decoration: none;
 }
 .world .container .link:hover {
