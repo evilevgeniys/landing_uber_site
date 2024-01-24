@@ -7,6 +7,9 @@ nav
 	height: 50px
 	background: #212121
 	z-index: 3
+
+.hamburger
+	display: none
 .title
 	position: relative
 	margin-top: 59px
@@ -42,7 +45,9 @@ nav
 		font-weight: 300
 		font-size: 15px
 		color: #FFFFFF
-		text-decoration: none
+		&:hover
+			text-decoration: none
+			color: $main-color
 	&_item
 		border-right: 2px dotted #000000
 		padding-right: 32px
@@ -80,6 +85,8 @@ nav
 		color: #FFFFFF
 		line-height: 12px
 		margin-top: 8px
+	.xs-visible
+		display: none
 	&_button
 		width: 172px
 		height: 46px
@@ -94,6 +101,7 @@ nav
 		border: none
 		margin-top: 19px
 		+btn_hover
+
 .promo
 	min-height: 800px
 	background: url('../img/bg/header_bg.png') center center/cover no-repeat

@@ -15,6 +15,10 @@ nav {
   z-index: 3;
 }
 
+.hamburger {
+  display: none;
+}
+
 .title {
   position: relative;
   margin-top: 59px;
@@ -58,7 +62,10 @@ nav {
   font-weight: 300;
   font-size: 15px;
   color: #FFFFFF;
+}
+.menu_link:hover {
   text-decoration: none;
+  color: #1EACC7;
 }
 .menu_item {
   border-right: 2px dotted #000000;
@@ -104,6 +111,9 @@ nav {
   color: #FFFFFF;
   line-height: 12px;
   margin-top: 8px;
+}
+.subheader .xs-visible {
+  display: none;
 }
 .subheader_button {
   width: 172px;
@@ -523,6 +533,26 @@ footer {
   .advantages_descr {
     width: 300px;
   }
+  .footer_wrapper > div {
+    width: 50%;
+  }
+  .footer_wrapper > div:nth-child(1) {
+    width: 25%;
+  }
+  .footer_wrapper > div:nth-child(3) {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer_mobile {
+    display: flex;
+  }
+  .footer_mobile a {
+    margin: 0 3px;
+  }
+  .footer_mobile a img {
+    width: 100%;
+  }
 }
 @media (max-width: 991px) {
   .menu_item {
@@ -559,6 +589,22 @@ footer {
     width: 300px;
     margin-top: 20px;
   }
+  .footer_wrapper {
+    flex-wrap: wrap;
+  }
+  .footer_wrapper > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .footer_wrapper > div:nth-child(1) {
+    width: 100%;
+  }
+  .footer_wrapper > div:nth-child(3) {
+    width: 100%;
+    justify-content: center;
+  }
 }
 @media (max-width: 767px) {
   .menu {
@@ -584,5 +630,57 @@ footer {
   }
   .menu_link {
     font-size: 20px;
+  }
+  .subheader .xs-hidden {
+    display: none;
+  }
+  .subheader .xs-visible {
+    display: block;
+  }
+  .subheader_phone {
+    display: block;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+  .subheader_button {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 12px;
+  }
+  .hamburger span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 4px;
+    transition: 0.5s all;
+  }
+  .hamburger_active span {
+    margin-bottom: -2px;
+  }
+  .hamburger_active span:nth-child(1) {
+    transform: translateY(3px) rotate(-45deg);
+  }
+  .hamburger_active span:nth-child(2) {
+    display: none;
+  }
+  .hamburger_active span:nth-child(3) {
+    transform: translateY(3px) rotate(45deg);
   }
 }/*# sourceMappingURL=style.css.map */
