@@ -763,6 +763,11 @@ footer {
   .menu {
     width: 85%;
   }
+  .menu_item {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
   .advantages {
     padding: 22px 0 36px 0;
   }
